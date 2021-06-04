@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.min.css">
+</head>
+<body ondrop="dropHandler(event);" ondragover="dragOverHandler(event);">
+    <div class="container">
+        <h1>Галерея изображений</h1>
+        <div class="images-gallery">
+            <div class="images-gallery__image-wrapper">
+                <img src="https://don16obqbay2c.cloudfront.net/frontend-test-task/images/448964016.jpg" alt="" class="images-gallery__image">
+                <div class="images-gallery__delete-btn"></div>
+            </div>
+            <div class="images-gallery__image-wrapper">
+                <img src="https://don16obqbay2c.cloudfront.net/frontend-test-task/images/448964020.jpg" alt="" class="images-gallery__image">
+                <div class="images-gallery__delete-btn"></div>
+            </div>
+            <div class="images-gallery__image-wrapper">
+                <img src="https://don16obqbay2c.cloudfront.net/frontend-test-task/images/448964010.jpg" alt="" class="images-gallery__image">
+                <div class="images-gallery__delete-btn"></div>
+            </div>
+            <div class="images-gallery__image-wrapper">
+                <img src="https://don16obqbay2c.cloudfront.net/frontend-test-task/images/493550754.jpg" alt="" class="images-gallery__image">
+                <div class="images-gallery__delete-btn"></div>
+            </div>
+            <div class="images-gallery__image-wrapper">
+                <img src="https://don16obqbay2c.cloudfront.net/frontend-test-task/images/493550755.jpg" alt="" class="images-gallery__image">
+                <div class="images-gallery__delete-btn"></div>
+            </div>
+        </div>
+        <div class="add-images-block">
+            <div class="add-images-block__json">
+                <p>Добавьте ссылку на файл изображения или JSON</p>
+                <input type="text" id="input-url">
+                <button id="upload-file-from-url">Загрузить</button>
+            </div>
+            
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
