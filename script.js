@@ -64,10 +64,8 @@ function dropHandler(ev) {
     if (ev.dataTransfer.items) {
         for (let i = 0; i < ev.dataTransfer.items.length; i++) {
             if (ev.dataTransfer.items[i].kind === 'file' && ev.dataTransfer.items[i].type === 'image/jpeg') {
-                console.log(ev.dataTransfer.items[i].type)
                 let file = ev.dataTransfer.items[i].getAsFile();
-                console.log('... file[' + i + '].name = ' + file.name)
-                previewFile(file)
+                addFileToGallery(file)
             }
         }
     } else {
@@ -79,7 +77,7 @@ function dragOverHandler(ev) {
     ev.preventDefault();
 }
 
-function previewFile(file) {
+function addFileToGallery(file) {
     let reader = new FileReader()
     reader.readAsDataURL(file)
     reader.onloadend = function () {
