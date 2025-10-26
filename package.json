@@ -1,0 +1,16 @@
+{
+  "name": "images-gallery",
+  "version": "1.0.0",
+  "description": "Чтобы запустить приложение достаточно скачать все файлы и открыть index.html в любом браузере. В галерее уже изначально добавлено несколько изображений для примера. Есть возможность добавить ссылку на изображение в текстовый инпут, а также ссылку на json файл вот такого формата - https://don16obqbay2c.cloudfront.net/frontend-test-task/gallery-images.json - при нажатии на кнопку Загрузить все полученные изображения будут добавлены в конец галереи.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --style=compressed style.scss style.min.css",
+    "watch": "sass --watch style.scss style.min.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.93.2"
+  }
+}
