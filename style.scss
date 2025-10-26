@@ -1,22 +1,25 @@
-$small-screen: 576px;
-$middle-screen: 768px;
-$large-screen: 992px;
+$middle_screen: 768px;
+$img_height: 200px;
 
-$row-height: 110px;
-$grow-step: 40px;
+.container {
+    @media (min-width: $middle_screen) {
+        margin: auto;
+        max-width: 860px;
+    }
+}
 
 .images-gallery {
     display: flex;
     flex-wrap: wrap;
+    gap: 10px;
+
     &__image-wrapper {
         position: relative;
-        height: $row-height;
-        margin-right: 10px;
-        margin-bottom: 10px;
         flex-grow: 1;
+
         &:hover .images-gallery__delete-btn {
             opacity: 1;
-            transition: .5s;
+            transition: 0.5s;
         }
     }
     &__delete-btn {
@@ -33,37 +36,17 @@ $grow-step: 40px;
         border-radius: 50%;
         cursor: pointer;
         opacity: 1;
+
+        @media (min-width: $middle_screen) {
+            opacity: 0;
+            width: 30px;
+            height: 30px;
+        }
     }
     &__image {
-        max-height: 100%;
-        min-width: 100%;
+        width: 100%;
         object-fit: cover;
-        vertical-align: bottom;
-      }
-}
-
-@media (min-width: $small-screen) {
-    .images-gallery__image-wrapper {height: $row-height + $grow-step;}
-}
-
-@media (min-width: $middle-screen) {
-    .container {
-        margin: auto;
-        width: 860px;
+        object-position: center center;
+        max-height: $img_height;
     }
-    .images-gallery__image-wrapper {height: $row-height + $grow-step * 2;}
-    .images-gallery__delete-btn {
-        opacity: 0;
-        width: 30px;
-        height: 30px;
-    }
-}
-
-
-@media (min-width: $large-screen) {
-    .container {
-        margin: auto;
-        width: 860px;
-    }
-    .images-gallery__image-wrapper {height: $row-height + $grow-step * 3;}
 }
